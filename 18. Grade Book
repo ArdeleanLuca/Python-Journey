@@ -1,0 +1,26 @@
+#Grade Book
+
+subjects = []
+grades = []
+
+while True:
+    subject = input("Subject (q to quit): ")
+
+    if subject == "q": break
+
+    grade = float(input("Grade: "))
+
+    subjects.append(subject)
+    grades.append(grade)
+
+total_sum = 0
+for grade in grades:
+    total_sum += grade
+average = total_sum / len(grades)
+
+print("-----YOUR GRADES-----")
+for i in range(len(subjects)):
+    print(f"{subjects[i]}: {grades[i]}")
+print()
+if average > 5: print(f"Felicitări, ai trecut! Media ta este: {average:.2f}!")
+else: print(f"Ne pare rău, media ta este {average:.2f}, ești corigent!")
