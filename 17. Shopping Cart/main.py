@@ -15,5 +15,9 @@ print("\n--- SHOPPING CART ---")
 for i in range(len(foods)):
     print(f"{foods[i]}: ${prices[i]}")
 
-total = sum(prices)
+total = 0
+for price in prices:
+    total += price
+
+
 print(f"\nTO PAY: ${total:.2f} ")
